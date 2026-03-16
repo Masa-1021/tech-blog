@@ -9,6 +9,7 @@ date: "2026-03-16"
 description: "MQTTの双方向通信を活用し、Oracle DBに蓄積されたデータを子機のRaspberry Piへ配信する方法を解説。"
 series: "MQTTとRaspberry Piで作る設備監視システム"
 seriesOrder: 5
+coverImage: "/images/posts/code-editor.jpg"
 ---
 
 # MQTTで双方向通信！Oracleのデータを子機に配信する
