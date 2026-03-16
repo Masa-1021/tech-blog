@@ -12,7 +12,6 @@ seriesOrder: 2
 coverImage: "/images/posts/coding-screen.jpg"
 ---
 
-# Pub/Subモデルとトピックの仕組み
 
 > **このシリーズ: 全5回**
 > 1. [第1回: MQTTとは？IoT時代の「伝言板」を初心者向けに解説](/posts/01_mqtt_introduction)

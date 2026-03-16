@@ -12,7 +12,6 @@ seriesOrder: 1
 coverImage: "/images/posts/laptop-code.jpg"
 ---
 
-# MQTTとは？IoT時代の「伝言板」を初心者向けに解説
 
 > **このシリーズ: 全5回**
 > 1. [第1回: MQTTとは？IoT時代の「伝言板」を初心者向けに解説](/posts/01_mqtt_introduction) ← 今ここ

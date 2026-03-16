@@ -12,7 +12,6 @@ seriesOrder: 4
 coverImage: "/images/posts/workspace.jpg"
 ---
 
-# 複数のRaspberry Piを中継機で束ねてOracle DBにデータを送る
 
 > **このシリーズ: 全5回**
 > 1. [第1回: MQTTとは？IoT時代の「伝言板」を初心者向けに解説](/posts/01_mqtt_introduction)

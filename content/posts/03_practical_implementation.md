@@ -12,7 +12,6 @@ seriesOrder: 3
 coverImage: "/images/posts/code-editor.jpg"
 ---
 
-# 実践：Raspberry Piで設備監視システムを作る
 
 > **このシリーズ: 全5回**
 > 1. [第1回: MQTTとは？IoT時代の「伝言板」を初心者向けに解説](/posts/01_mqtt_introduction)
