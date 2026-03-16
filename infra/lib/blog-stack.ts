@@ -4,8 +4,12 @@ import * as cloudfront from "aws-cdk-lib/aws-cloudfront";
 import * as origins from "aws-cdk-lib/aws-cloudfront-origins";
 import type { Construct } from "constructs";
 
+export interface BlogStackProps extends cdk.StackProps {
+  webAclArn: string;
+}
+
 export class BlogStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props: BlogStackProps) {
     super(scope, id, props);
 
     // S3 bucket for static site content
@@ -90,6 +94,7 @@ function handler(event) {
         },
       ],
       priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
+      webAclId: props.webAclArn,
     });
 
     // Stack outputs
