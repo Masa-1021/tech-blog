@@ -1,3 +1,16 @@
+---
+title: "実践：Raspberry Piで設備監視システムを作る"
+emoji: "🔧"
+type: "tech"
+topics: ["MQTT", "RaspberryPi", "Python", "IoT"]
+published: true
+category: "HowTo"
+date: "2026-03-16"
+description: "Raspberry PiとMQTTを使って実際に設備監視システムを構築する手順を解説。センサーデータの取得からブローカーへの送信まで。"
+series: "MQTTとRaspberry Piで作る設備監視システム"
+seriesOrder: 3
+---
+
 # 実践：Raspberry Piで設備監視システムを作る
 
 ## はじめに

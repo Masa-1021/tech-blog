@@ -1,3 +1,16 @@
+---
+title: "Pub/Subモデルとトピックの仕組み"
+emoji: "🔀"
+type: "tech"
+topics: ["MQTT", "IoT", "PubSub"]
+published: true
+category: "HowTo"
+date: "2026-03-16"
+description: "MQTTのPub/Subモデルとトピック構造を解説。ブローカーを介したメッセージ配信の仕組みを理解する。"
+series: "MQTTとRaspberry Piで作る設備監視システム"
+seriesOrder: 2
+---
+
 # Pub/Subモデルとトピックの仕組み
 
 ## はじめに

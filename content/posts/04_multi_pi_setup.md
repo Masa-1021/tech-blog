@@ -1,3 +1,16 @@
+---
+title: "複数のRaspberry Piを中継機で束ねてOracle DBにデータを送る"
+emoji: "🗄️"
+type: "tech"
+topics: ["MQTT", "RaspberryPi", "OracleDB", "IoT"]
+published: true
+category: "HowTo"
+date: "2026-03-16"
+description: "複数のRaspberry Piを中継機（ブリッジ）で束ね、収集したデータをOracle DBに保存するシステム構成を解説。"
+series: "MQTTとRaspberry Piで作る設備監視システム"
+seriesOrder: 4
+---
+
 # 複数のRaspberry Piを中継機で束ねてOracle DBにデータを送る
 
 ## はじめに

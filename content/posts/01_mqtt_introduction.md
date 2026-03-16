@@ -1,3 +1,16 @@
+---
+title: "MQTTとは？IoT時代の「伝言板」を初心者向けに解説"
+emoji: "📡"
+type: "tech"
+topics: ["MQTT", "IoT", "RaspberryPi"]
+published: true
+category: "HowTo"
+date: "2026-03-16"
+description: "MQTTを「伝言板」に例えて初心者向けにわかりやすく解説。IoTやスマートホームで使われる軽量メッセージプロトコルの基礎を学ぶ。"
+series: "MQTTとRaspberry Piで作る設備監視システム"
+seriesOrder: 1
+---
+
 # MQTTとは？IoT時代の「伝言板」を初心者向けに解説
 
 ## はじめに
