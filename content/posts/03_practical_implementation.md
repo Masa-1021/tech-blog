@@ -14,6 +14,13 @@ coverImage: "/images/posts/code-editor.jpg"
 
 # 実践：Raspberry Piで設備監視システムを作る
 
+> **このシリーズ: 全5回**
+> 1. [第1回: MQTTとは？IoT時代の「伝言板」を初心者向けに解説](/posts/01_mqtt_introduction)
+> 2. [第2回: Pub/Subモデルとトピックの仕組み](/posts/02_pubsub_topics)
+> 3. [第3回: 実践：Raspberry Piで設備監視システムを作る](/posts/03_practical_implementation) ← 今ここ
+> 4. [第4回: 複数のRaspberry Piを中継機で束ねてOracle DBにデータを送る](/posts/04_multi_pi_setup)
+> 5. [第5回: MQTTで双方向通信！Oracleのデータを子機に配信する](/posts/05_bidirectional_mqtt)
+
 ## はじめに
 
 前回までの記事で、MQTTとPub/Subモデルの概念を理解しました。
