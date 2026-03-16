@@ -12,7 +12,6 @@ seriesOrder: 8
 coverImage: "/images/posts/workspace.jpg"
 ---
 
-# 文字が流れるように表示される仕組み
 
 > **このシリーズ: 全10回**
 > 1. [第1回: AIの回答を待ちきれない？30秒の壁を乗り越える方法](/posts/2026-03-16-image-analysis-01-lambda-streaming)

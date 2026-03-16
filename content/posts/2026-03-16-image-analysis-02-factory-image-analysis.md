@@ -12,7 +12,6 @@ seriesOrder: 2
 coverImage: "/images/posts/coding-screen.jpg"
 ---
 
-# 工場の図面をAIに読ませたい
 
 > **このシリーズ: 全10回**
 > 1. [第1回: AIの回答を待ちきれない？30秒の壁を乗り越える方法](/posts/2026-03-16-image-analysis-01-lambda-streaming)

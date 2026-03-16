@@ -12,7 +12,6 @@ seriesOrder: 1
 coverImage: "/images/posts/laptop-code.jpg"
 ---
 
-# AIの回答を待ちきれない？30秒の壁を乗り越える方法
 
 > **このシリーズ: 全10回**
 > 1. [第1回: AIの回答を待ちきれない？30秒の壁を乗り越える方法](/posts/2026-03-16-image-analysis-01-lambda-streaming) ← 今ここ
