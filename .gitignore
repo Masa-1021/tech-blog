@@ -28,6 +28,9 @@ yarn-error.log*
 # env files
 .env*.local
 
+# AWS credentials
+*.csv
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
