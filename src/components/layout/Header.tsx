@@ -14,7 +14,7 @@ export function Header() {
             {"</>"}
           </span>
           <span className="font-mono text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-            TECH BLOG
+            DX APPS
           </span>
         </Link>
         <div className="flex items-center gap-3">
@@ -23,7 +23,13 @@ export function Header() {
               href="/"
               className="rounded-lg px-3 py-1.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
             >
-              Home
+              Apps
+            </Link>
+            <Link
+              href="/posts"
+              className="rounded-lg px-3 py-1.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+            >
+              Posts
             </Link>
           </nav>
           <SearchModal searchIndex={searchIndex} />
