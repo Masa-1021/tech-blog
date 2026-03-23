@@ -1,0 +1,11 @@
+services:
+  deploy-watcher:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - repo-cache:/repo
+
+volumes:
+  repo-cache:
