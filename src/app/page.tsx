@@ -1,41 +1,31 @@
-import {
-  getPaginatedPosts,
-  getAllCategories,
-  getAllTags,
-  getFeaturedPosts,
-} from "@/lib/posts";
-import { ArticleList } from "@/components/articles/ArticleList";
-import { HeroSection } from "@/components/articles/HeroSection";
-import { Pagination } from "@/components/ui/Pagination";
-import { Sidebar } from "@/components/layout/Sidebar";
-import { CategoryList } from "@/components/sidebar/CategoryList";
-import { TagList } from "@/components/sidebar/TagList";
-import { FeaturedArticles } from "@/components/sidebar/FeaturedArticles";
+import { getAllApps, APP_CATEGORIES } from "@/lib/apps";
+import { VisionMap } from "@/components/apps/VisionMap";
+import { AppGrid } from "@/components/apps/AppGrid";
+import type { AppCategory } from "@/types/app";
 
-export default function HomePage() {
-  const { posts, totalPages, currentPage } = getPaginatedPosts(1);
-  const categories = getAllCategories();
-  const tags = getAllTags();
-  const featuredPosts = getFeaturedPosts();
-  const heroPost = featuredPosts[0];
-  const remainingPosts = heroPost
-    ? posts.filter((p) => p.slug !== heroPost.slug)
-    : posts;
+export default function AppsPage() {
+  const apps = getAllApps();
+  const appsByCategory = Object.fromEntries(
+    APP_CATEGORIES.map((category) => [
+      category,
+      apps.filter((app) => app.category === category),
+    ])
+  ) as Record<AppCategory, ReturnType<typeof getAllApps>>;
 
   return (
-    <>
-      {heroPost && <HeroSection post={heroPost} />}
-      <div className="flex gap-8">
-        <div className="min-w-0 flex-1">
-          <ArticleList posts={remainingPosts} />
-          <Pagination currentPage={currentPage} totalPages={totalPages} basePath="" />
-        </div>
-        <Sidebar>
-          <CategoryList categories={categories} />
-          <TagList tags={tags} />
-          <FeaturedArticles posts={featuredPosts} />
-        </Sidebar>
+    <div>
+      <div className="mb-10">
+        <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+          製造DXアプリ一覧
+        </h1>
+        <p className="text-gray-500 dark:text-gray-400">
+          三田工場 生産技術グループが開発・運用する製造DXアプリケーション群
+        </p>
       </div>
-    </>
+
+      <VisionMap apps={apps} />
+
+      <AppGrid appsByCategory={appsByCategory} />
+    </div>
   );
 }
