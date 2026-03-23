@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C2410C"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.25)"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Cloud shape -->
+  <path d="M 128 238 Q 122 190 165 182 Q 170 138 215 132 Q 234 102 265 115 Q 298 94 330 120 Q 378 120 378 178 Q 408 188 398 238 Z" fill="white" filter="url(#shadow)"/>
+  <!-- Stream arrows -->
+  <line x1="182" y1="278" x2="292" y2="278" stroke="white" stroke-width="18" stroke-linecap="round"/>
+  <polyline points="275,258 315,278 275,298" fill="none" stroke="white" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="195" y1="316" x2="282" y2="316" stroke="white" stroke-width="13" stroke-linecap="round" opacity="0.7"/>
+  <polyline points="265,300 298,316 265,332" fill="none" stroke="white" stroke-width="11" stroke-linejoin="round" stroke-linecap="round" opacity="0.7"/>
+  <line x1="208" y1="350" x2="268" y2="350" stroke="white" stroke-width="9" stroke-linecap="round" opacity="0.45"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="50" font-weight="900" fill="white" letter-spacing="2">ANCIENT</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">API Streaming</text>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1C1917"/>
+      <stop offset="40%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#0C0A09"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <!-- Left accent bar (tricolor) -->
+  <rect x="0" y="0" width="8" height="300" fill="url(#accent)"/>
+  <!-- Patlite icon left -->
+  <rect x="80" y="40" width="72" height="220" rx="12" fill="#2D2A27" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <!-- Red light (on) -->
+  <circle cx="116" cy="90" r="26" fill="#1C1917"/>
+  <circle cx="116" cy="90" r="22" fill="#EF4444"/>
+  <circle cx="108" cy="82" r="6" fill="rgba(255,255,255,0.5)"/>
+  <!-- Yellow light (dim) -->
+  <circle cx="116" cy="150" r="26" fill="#1C1917"/>
+  <circle cx="116" cy="150" r="22" fill="#78350F"/>
+  <!-- Green light (dim) -->
+  <circle cx="116" cy="210" r="26" fill="#1C1917"/>
+  <circle cx="116" cy="210" r="22" fill="#14532D"/>
+  <!-- Dividers -->
+  <line x1="82" y1="120" x2="150" y2="120" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <line x1="82" y1="180" x2="150" y2="180" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <!-- App name -->
+  <text x="200" y="115" font-family="'Arial Black', Arial, sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="3">COLORS</text>
+  <!-- Subtitle line -->
+  <line x1="200" y1="135" x2="700" y2="135" stroke="rgba(239,68,68,0.6)" stroke-width="2"/>
+  <!-- Category tag -->
+  <rect x="200" y="148" width="220" height="28" rx="14" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.45)" stroke-width="1"/>
+  <text x="310" y="167" text-anchor="middle" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="#F87171" font-weight="600" letter-spacing="1">IoT / 画像認識 / 監視</text>
+  <!-- Description -->
+  <text x="200" y="210" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">色検知による状態監視システム</text>
+  <text x="200" y="242" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.55)">カメラ映像からパトライトの状態を自動検知し稼働データをリアルタイム蓄積</text>
+  <!-- Right decorative: status indicators -->
+  <text x="900" y="100" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="rgba(239,68,68,0.5)" font-weight="600">● ALARM</text>
+  <text x="900" y="140" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="rgba(234,179,8,0.35)" font-weight="600">● WARNING</text>
+  <text x="900" y="180" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="rgba(34,197,94,0.35)" font-weight="600">● NORMAL</text>
+  <rect x="880" y="60" width="270" height="180" rx="10" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+</svg>

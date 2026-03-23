@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C4A6E"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Factory silhouette (background) -->
+  <path d="M 100 330 L 100 220 L 140 220 L 140 180 L 180 180 L 180 160 L 220 130 L 260 160 L 260 180 L 300 180 L 300 200 L 340 200 L 340 220 L 380 220 L 380 330 Z" fill="rgba(255,255,255,0.18)"/>
+  <!-- Chimney smokes -->
+  <path d="M 178 160 Q 172 140 178 120 Q 184 100 178 82" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 198 150 Q 192 128 198 108 Q 204 88 198 70" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Smartphone foreground -->
+  <rect x="188" y="128" width="136" height="216" rx="20" fill="white" filter="url(#shadow)"/>
+  <rect x="196" y="144" width="120" height="168" rx="6" fill="#0C4A6E"/>
+  <!-- Home button -->
+  <circle cx="256" cy="326" r="10" fill="#E0F2FE"/>
+  <!-- Bar chart on phone screen -->
+  <rect x="210" y="270" width="18" height="30" rx="3" fill="#38BDF8"/>
+  <rect x="234" y="252" width="18" height="48" rx="3" fill="#0EA5E9"/>
+  <rect x="258" y="238" width="18" height="62" rx="3" fill="#7DD3FC"/>
+  <rect x="282" y="260" width="18" height="40" rx="3" fill="#38BDF8"/>
+  <!-- Phone top notch -->
+  <rect x="232" y="148" width="48" height="8" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="60" font-weight="900" fill="white" letter-spacing="3">HINT</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">現場デジタル化</text>
+</svg>

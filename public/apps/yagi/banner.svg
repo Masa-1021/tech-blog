@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A0533"/>
+      <stop offset="35%" stop-color="#2E1065"/>
+      <stop offset="100%" stop-color="#0D0218"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="300" fill="url(#accent)"/>
+  <!-- Smartphone icon left -->
+  <rect x="62" y="42" width="120" height="220" rx="18" fill="white" opacity="0.85"/>
+  <rect x="74" y="58" width="96" height="176" rx="10" fill="#2E1065"/>
+  <rect x="88" y="46" width="44" height="7" rx="3.5" fill="rgba(196,181,253,0.6)"/>
+  <!-- T9 keypad on screen (3x3 + bottom row) -->
+  <rect x="80" y="64" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="114" y="64" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="148" y="64" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="80" y="92" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="114" y="92" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="148" y="92" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="80" y="120" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="114" y="120" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="148" y="120" width="28" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="80" y="148" width="28" height="22" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="114" y="148" width="28" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="148" y="148" width="28" height="22" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <!-- AI output text area on phone -->
+  <rect x="80" y="180" width="96" height="44" rx="6" fill="rgba(255,255,255,0.1)"/>
+  <rect x="86" y="188" width="70" height="8" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <rect x="86" y="202" width="55" height="8" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <!-- Home bar -->
+  <rect x="100" y="228" width="44" height="5" rx="2.5" fill="rgba(196,181,253,0.5)"/>
+  <!-- AI sparkle stars -->
+  <path d="M 230 82 L 237 104 L 259 111 L 237 118 L 230 140 L 223 118 L 201 111 L 223 104 Z" fill="white" opacity="0.92"/>
+  <path d="M 258 148 L 262 160 L 274 164 L 262 168 L 258 180 L 254 168 L 242 164 L 254 160 Z" fill="white" opacity="0.7"/>
+  <path d="M 210 152 L 213 161 L 222 164 L 213 167 L 210 176 L 207 167 L 198 164 L 207 161 Z" fill="rgba(255,255,255,0.55)"/>
+  <!-- App name -->
+  <text x="300" y="115" font-family="'Arial Black', Arial, sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="3">YAGI</text>
+  <!-- Subtitle line -->
+  <line x1="300" y1="135" x2="750" y2="135" stroke="rgba(196,181,253,0.6)" stroke-width="2"/>
+  <!-- Category tag -->
+  <rect x="300" y="148" width="230" height="28" rx="14" fill="rgba(196,181,253,0.15)" stroke="rgba(196,181,253,0.45)" stroke-width="1"/>
+  <text x="415" y="167" text-anchor="middle" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="#C4B5FD" font-weight="600" letter-spacing="1">AI / 入力支援 / 保全記録</text>
+  <!-- Description -->
+  <text x="300" y="210" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">AIチャット補完型トラブル・メンテナンス入力システム</text>
+  <text x="300" y="242" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.55)">AIとの対話で内容を補完しながらトラブル・保全記録をかんたんに入力</text>
+  <!-- Right decorative: sparkle cluster -->
+  <circle cx="1060" cy="150" r="120" fill="none" stroke="rgba(196,181,253,0.06)" stroke-width="2"/>
+  <!-- Stars decoration -->
+  <path d="M 1010 110 L 1014 124 L 1028 128 L 1014 132 L 1010 146 L 1006 132 L 992 128 L 1006 124 Z" fill="rgba(196,181,253,0.35)"/>
+  <path d="M 1090 85 L 1093 95 L 1103 98 L 1093 101 L 1090 111 L 1087 101 L 1077 98 L 1087 95 Z" fill="rgba(196,181,253,0.28)"/>
+  <path d="M 1120 160 L 1123 170 L 1133 173 L 1123 176 L 1120 186 L 1117 176 L 1107 173 L 1117 170 Z" fill="rgba(196,181,253,0.25)"/>
+  <path d="M 1040 195 L 1042 202 L 1049 204 L 1042 206 L 1040 213 L 1038 206 L 1031 204 L 1038 202 Z" fill="rgba(196,181,253,0.2)"/>
+</svg>

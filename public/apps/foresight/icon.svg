@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Eye shape -->
+  <path d="M 96 220 Q 180 128 256 128 Q 332 128 416 220 Q 332 312 256 312 Q 180 312 96 220 Z" fill="white" filter="url(#shadow)"/>
+  <!-- Iris -->
+  <circle cx="256" cy="220" r="60" fill="#065F46"/>
+  <!-- Pupil -->
+  <circle cx="256" cy="220" r="32" fill="#022C22"/>
+  <!-- Eye shine -->
+  <circle cx="270" cy="206" r="10" fill="rgba(255,255,255,0.7)"/>
+  <!-- Prediction wave lines below eye -->
+  <path d="M 120 345 Q 155 325 190 345 Q 225 365 260 345 Q 295 325 330 345 Q 365 365 395 345" fill="none" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M 140 375 Q 172 358 204 375 Q 236 392 268 375 Q 300 358 332 375 Q 364 392 380 375" fill="none" stroke="white" stroke-width="9" stroke-linecap="round" opacity="0.6"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="44" font-weight="900" fill="white" letter-spacing="1">FORESIGHT</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">予兆保全AI</text>
+</svg>

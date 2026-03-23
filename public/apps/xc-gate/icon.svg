@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Document shape with folded corner -->
+  <path d="M 160 108 L 330 108 L 375 153 L 375 375 Q 375 390 360 390 L 160 390 Q 145 390 145 375 L 145 123 Q 145 108 160 108 Z" fill="white" filter="url(#shadow)"/>
+  <!-- Folded corner triangle -->
+  <path d="M 330 108 L 330 153 L 375 153 Z" fill="#A7F3D0"/>
+  <!-- Checkbox items -->
+  <!-- Row 1 - checked -->
+  <rect x="172" y="188" width="26" height="26" rx="5" fill="#059669"/>
+  <polyline points="178,200 185,209 220,192" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="210" y="193" width="130" height="14" rx="4" fill="#D1FAE5"/>
+  <!-- Row 2 - checked -->
+  <rect x="172" y="230" width="26" height="26" rx="5" fill="#059669"/>
+  <polyline points="178,242 185,251 220,234" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="210" y="235" width="100" height="14" rx="4" fill="#D1FAE5"/>
+  <!-- Row 3 - unchecked (in progress) -->
+  <rect x="172" y="272" width="26" height="26" rx="5" fill="none" stroke="#059669" stroke-width="3"/>
+  <rect x="210" y="277" width="140" height="14" rx="4" fill="#ECFDF5"/>
+  <!-- Row 4 - unchecked -->
+  <rect x="172" y="314" width="26" height="26" rx="5" fill="none" stroke="#A7F3D0" stroke-width="3"/>
+  <rect x="210" y="319" width="115" height="14" rx="4" fill="rgba(167,243,208,0.3)"/>
+  <!-- Digital glow dot top right -->
+  <circle cx="340" cy="148" r="12" fill="#10B981"/>
+  <circle cx="340" cy="148" r="7" fill="white"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="46" font-weight="900" fill="white" letter-spacing="1">XC-GATE</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">ペーパーレス帳票</text>
+</svg>

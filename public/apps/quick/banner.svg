@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#451A03"/>
+      <stop offset="35%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#1C0A00"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="300" fill="url(#accent)"/>
+  <!-- Speedometer icon left -->
+  <path d="M 42 200 A 118 118 0 1 1 282 200" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 42 200 A 118 118 0 1 1 228 112" fill="none" stroke="white" stroke-width="24" stroke-linecap="round" opacity="0.85"/>
+  <!-- Tick marks -->
+  <line x1="42" y1="200" x2="60" y2="200" stroke="rgba(255,255,255,0.5)" stroke-width="4"/>
+  <line x1="66" y1="118" x2="79" y2="130" stroke="rgba(255,255,255,0.5)" stroke-width="4"/>
+  <line x1="162" y1="82" x2="162" y2="98" stroke="rgba(255,255,255,0.5)" stroke-width="4"/>
+  <line x1="258" y1="118" x2="245" y2="130" stroke="rgba(255,255,255,0.5)" stroke-width="4"/>
+  <line x1="282" y1="200" x2="264" y2="200" stroke="rgba(255,255,255,0.5)" stroke-width="4"/>
+  <!-- Needle -->
+  <line x1="162" y1="200" x2="228" y2="112" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="162" cy="200" r="16" fill="white"/>
+  <circle cx="162" cy="200" r="8" fill="#D97706"/>
+  <!-- App name -->
+  <text x="320" y="115" font-family="'Arial Black', Arial, sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="3">QUICK</text>
+  <!-- Subtitle line -->
+  <line x1="320" y1="135" x2="800" y2="135" stroke="rgba(252,211,77,0.6)" stroke-width="2"/>
+  <!-- Category tag -->
+  <rect x="320" y="148" width="230" height="28" rx="14" fill="rgba(252,211,77,0.15)" stroke="rgba(252,211,77,0.45)" stroke-width="1"/>
+  <text x="435" y="167" text-anchor="middle" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="#FCD34D" font-weight="600" letter-spacing="1">リアルタイム / 生産管理 / DX</text>
+  <!-- Description -->
+  <text x="320" y="210" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">リアルタイム生産・品質・トラブル統合ダッシュボード</text>
+  <text x="320" y="242" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.55)">生産実績・稼働率・品質結果・トラブル情報をひとつの画面でリアルタイム把握</text>
+  <!-- Right decorative: bar chart -->
+  <rect x="890" y="130" width="38" height="120" rx="4" fill="rgba(252,211,77,0.15)" stroke="rgba(252,211,77,0.3)" stroke-width="1"/>
+  <rect x="940" y="100" width="38" height="150" rx="4" fill="rgba(252,211,77,0.2)" stroke="rgba(252,211,77,0.3)" stroke-width="1"/>
+  <rect x="990" y="80" width="38" height="170" rx="4" fill="rgba(252,211,77,0.28)" stroke="rgba(252,211,77,0.4)" stroke-width="1"/>
+  <rect x="1040" y="110" width="38" height="140" rx="4" fill="rgba(252,211,77,0.2)" stroke="rgba(252,211,77,0.3)" stroke-width="1"/>
+  <rect x="1090" y="90" width="38" height="160" rx="4" fill="rgba(252,211,77,0.25)" stroke="rgba(252,211,77,0.35)" stroke-width="1"/>
+  <line x1="875" y1="252" x2="1145" y2="252" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+</svg>

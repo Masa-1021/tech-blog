@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#450A0A"/>
+      <stop offset="35%" stop-color="#7F1D1D"/>
+      <stop offset="100%" stop-color="#1C0505"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCA5A5"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="300" fill="url(#accent)"/>
+  <!-- Gantt chart icon left -->
+  <rect x="50" y="60" width="210" height="178" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <!-- Header -->
+  <rect x="50" y="60" width="210" height="30" rx="10" fill="rgba(255,255,255,0.18)"/>
+  <rect x="50" y="78" width="210" height="12" fill="rgba(255,255,255,0.18)"/>
+  <!-- Gantt bars -->
+  <rect x="100" y="104" width="108" height="18" rx="3" fill="white" opacity="0.85"/>
+  <rect x="120" y="130" width="80" height="18" rx="3" fill="rgba(255,255,255,0.65)"/>
+  <rect x="135" y="156" width="60" height="18" rx="3" fill="rgba(255,255,255,0.5)"/>
+  <rect x="100" y="182" width="120" height="18" rx="3" fill="rgba(255,255,255,0.4)"/>
+  <rect x="112" y="208" width="72" height="18" rx="3" fill="rgba(255,255,255,0.28)"/>
+  <!-- Row labels -->
+  <rect x="56" y="106" width="38" height="14" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="56" y="132" width="38" height="14" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="56" y="158" width="38" height="14" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="56" y="184" width="38" height="14" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="56" y="210" width="38" height="14" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <!-- Today line -->
+  <line x1="192" y1="90" x2="192" y2="238" stroke="rgba(252,165,165,0.7)" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <!-- App name -->
+  <text x="300" y="115" font-family="'Arial Black', Arial, sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="4">TTS</text>
+  <!-- Subtitle line -->
+  <line x1="300" y1="135" x2="750" y2="135" stroke="rgba(252,165,165,0.6)" stroke-width="2"/>
+  <!-- Category tag -->
+  <rect x="300" y="148" width="250" height="28" rx="14" fill="rgba(252,165,165,0.15)" stroke="rgba(252,165,165,0.45)" stroke-width="1"/>
+  <text x="425" y="167" text-anchor="middle" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="#FCA5A5" font-weight="600" letter-spacing="1">AI / タスク管理 / ガントチャート</text>
+  <!-- Description -->
+  <text x="300" y="210" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">チームタスク管理システム</text>
+  <text x="300" y="242" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.55)">AIとの対話でタスクの進捗管理・チーム状況の把握をかんたんに</text>
+  <!-- Right decorative -->
+  <circle cx="1080" cy="150" r="130" fill="none" stroke="rgba(252,165,165,0.06)" stroke-width="2"/>
+  <circle cx="1080" cy="150" r="90" fill="none" stroke="rgba(252,165,165,0.08)" stroke-width="2"/>
+  <circle cx="1080" cy="150" r="50" fill="rgba(252,165,165,0.05)"/>
+  <!-- Small gantt decoration -->
+  <rect x="1020" y="115" width="55" height="10" rx="3" fill="rgba(252,165,165,0.25)"/>
+  <rect x="1035" y="133" width="40" height="10" rx="3" fill="rgba(252,165,165,0.2)"/>
+  <rect x="1040" y="151" width="30" height="10" rx="3" fill="rgba(252,165,165,0.15)"/>
+</svg>

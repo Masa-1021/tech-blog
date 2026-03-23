@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0C2A3E"/>
+      <stop offset="35%" stop-color="#0C4A6E"/>
+      <stop offset="100%" stop-color="#071C2C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="300" fill="url(#accent)"/>
+  <!-- Smartphone icon left -->
+  <rect x="65" y="48" width="100" height="200" rx="16" fill="white" opacity="0.88"/>
+  <rect x="75" y="64" width="80" height="148" rx="8" fill="#0C4A6E"/>
+  <circle cx="115" cy="232" r="8" fill="rgba(186,230,253,0.8)"/>
+  <!-- Bar chart on phone -->
+  <rect x="82" y="168" width="14" height="26" rx="2" fill="#38BDF8"/>
+  <rect x="100" y="152" width="14" height="42" rx="2" fill="#0EA5E9"/>
+  <rect x="118" y="140" width="14" height="54" rx="2" fill="#7DD3FC"/>
+  <rect x="136" y="158" width="14" height="36" rx="2" fill="#38BDF8"/>
+  <!-- Factory silhouette tiny at top of phone -->
+  <path d="M 82 136 L 82 100 L 94 100 L 94 88 L 108 78 L 122 88 L 122 100 L 136 100 L 136 136 Z" fill="rgba(255,255,255,0.12)"/>
+  <!-- App name -->
+  <text x="200" y="115" font-family="'Arial Black', Arial, sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="3">HINT</text>
+  <!-- Subtitle line -->
+  <line x1="200" y1="135" x2="650" y2="135" stroke="rgba(56,189,248,0.6)" stroke-width="2"/>
+  <!-- Category tag -->
+  <rect x="200" y="148" width="230" height="28" rx="14" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.45)" stroke-width="1"/>
+  <text x="315" y="167" text-anchor="middle" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="#38BDF8" font-weight="600" letter-spacing="1">モバイル / 生産管理 / DX</text>
+  <!-- Description -->
+  <text x="200" y="210" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">製造現場デジタル化ツール群</text>
+  <text x="200" y="242" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.55)">生産状況確認・実績入力・トレーサビリティ照会をデジタルで一元化</text>
+  <!-- Right decorative: connected dots -->
+  <circle cx="950" cy="100" r="18" fill="rgba(56,189,248,0.2)" stroke="rgba(56,189,248,0.3)" stroke-width="2"/>
+  <circle cx="1050" cy="150" r="24" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.25)" stroke-width="2"/>
+  <circle cx="1130" cy="100" r="14" fill="rgba(56,189,248,0.2)" stroke="rgba(56,189,248,0.3)" stroke-width="2"/>
+  <circle cx="1000" cy="210" r="16" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.25)" stroke-width="2"/>
+  <circle cx="1110" cy="210" r="20" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.22)" stroke-width="2"/>
+  <line x1="950" y1="100" x2="1050" y2="150" stroke="rgba(56,189,248,0.2)" stroke-width="2"/>
+  <line x1="1130" y1="100" x2="1050" y2="150" stroke="rgba(56,189,248,0.2)" stroke-width="2"/>
+  <line x1="1050" y1="150" x2="1000" y2="210" stroke="rgba(56,189,248,0.15)" stroke-width="2"/>
+  <line x1="1050" y1="150" x2="1110" y2="210" stroke="rgba(56,189,248,0.15)" stroke-width="2"/>
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="35%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#0D0B25"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="300" fill="url(#accent)"/>
+  <!-- Magnifier icon left -->
+  <circle cx="145" cy="148" r="78" fill="none" stroke="white" stroke-width="16" opacity="0.85"/>
+  <circle cx="145" cy="148" r="52" fill="rgba(255,255,255,0.1)"/>
+  <line x1="202" y1="205" x2="265" y2="268" stroke="white" stroke-width="18" stroke-linecap="round" opacity="0.85"/>
+  <!-- Plus in magnifier -->
+  <line x1="120" y1="148" x2="170" y2="148" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <line x1="145" y1="123" x2="145" y2="173" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <!-- Node dots around magnifier -->
+  <circle cx="58" cy="90" r="12" fill="rgba(129,140,248,0.4)" stroke="rgba(129,140,248,0.6)" stroke-width="2"/>
+  <circle cx="58" cy="210" r="12" fill="rgba(129,140,248,0.4)" stroke="rgba(129,140,248,0.6)" stroke-width="2"/>
+  <line x1="58" y1="90" x2="85" y2="120" stroke="rgba(129,140,248,0.3)" stroke-width="2"/>
+  <line x1="58" y1="210" x2="85" y2="176" stroke="rgba(129,140,248,0.3)" stroke-width="2"/>
+  <!-- App name -->
+  <text x="310" y="108" font-family="'Arial Black', Arial, sans-serif" font-size="56" font-weight="900" fill="white" letter-spacing="1">TRACEABILITY</text>
+  <!-- Subtitle line -->
+  <line x1="310" y1="128" x2="1000" y2="128" stroke="rgba(129,140,248,0.6)" stroke-width="2"/>
+  <!-- Category tag -->
+  <rect x="310" y="141" width="240" height="28" rx="14" fill="rgba(129,140,248,0.15)" stroke="rgba(129,140,248,0.45)" stroke-width="1"/>
+  <text x="430" y="160" text-anchor="middle" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="14" fill="#818CF8" font-weight="600" letter-spacing="1">品質追跡 / 製造管理 / 検索</text>
+  <!-- Description -->
+  <text x="310" y="205" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">製造トレーサビリティシステム</text>
+  <text x="310" y="237" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.55)">不具合発生時の影響範囲・工程・部品ロットを瞬時に特定する統合検索プラットフォーム</text>
+  <text x="310" y="265" font-family="Meiryo, Yu Gothic, MS PGothic, Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.4)">部品ロット・工程・設備・作業員をワンクリックで横断追跡</text>
+  <!-- Right decorative: connected nodes -->
+  <circle cx="940" cy="120" r="16" fill="rgba(129,140,248,0.2)" stroke="rgba(129,140,248,0.4)" stroke-width="2"/>
+  <circle cx="1020" cy="80" r="12" fill="rgba(129,140,248,0.2)" stroke="rgba(129,140,248,0.3)" stroke-width="1.5"/>
+  <circle cx="1100" cy="120" r="16" fill="rgba(129,140,248,0.2)" stroke="rgba(129,140,248,0.4)" stroke-width="2"/>
+  <circle cx="940" cy="200" r="12" fill="rgba(129,140,248,0.15)" stroke="rgba(129,140,248,0.3)" stroke-width="1.5"/>
+  <circle cx="1020" cy="170" r="20" fill="rgba(129,140,248,0.18)" stroke="rgba(129,140,248,0.4)" stroke-width="2"/>
+  <circle cx="1100" cy="220" r="14" fill="rgba(129,140,248,0.15)" stroke="rgba(129,140,248,0.3)" stroke-width="1.5"/>
+  <line x1="940" y1="120" x2="1020" y2="80" stroke="rgba(129,140,248,0.22)" stroke-width="2"/>
+  <line x1="1020" y1="80" x2="1100" y2="120" stroke="rgba(129,140,248,0.22)" stroke-width="2"/>
+  <line x1="940" y1="120" x2="1020" y2="170" stroke="rgba(129,140,248,0.22)" stroke-width="2"/>
+  <line x1="1100" y1="120" x2="1020" y2="170" stroke="rgba(129,140,248,0.22)" stroke-width="2"/>
+  <line x1="940" y1="200" x2="1020" y2="170" stroke="rgba(129,140,248,0.18)" stroke-width="2"/>
+  <line x1="1100" y1="220" x2="1020" y2="170" stroke="rgba(129,140,248,0.18)" stroke-width="2"/>
+</svg>

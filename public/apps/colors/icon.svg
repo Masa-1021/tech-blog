@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1917"/>
+      <stop offset="100%" stop-color="#44403C"/>
+    </linearGradient>
+    <filter id="glow-red">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-yellow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-green">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Patlite housing -->
+  <rect x="200" y="106" width="112" height="280" rx="18" fill="#2D2A27" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+  <!-- Mount pole -->
+  <rect x="242" y="386" width="28" height="28" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <!-- Red light (top) - on -->
+  <circle cx="256" cy="155" r="40" fill="#1C1917"/>
+  <circle cx="256" cy="155" r="34" fill="#EF4444" filter="url(#glow-red)"/>
+  <circle cx="244" cy="144" r="10" fill="rgba(255,255,255,0.5)"/>
+  <!-- Yellow light (middle) - dim -->
+  <circle cx="256" cy="236" r="40" fill="#1C1917"/>
+  <circle cx="256" cy="236" r="34" fill="#78350F"/>
+  <circle cx="244" cy="225" r="8" fill="rgba(255,255,255,0.15)"/>
+  <!-- Green light (bottom) - dim -->
+  <circle cx="256" cy="317" r="40" fill="#1C1917"/>
+  <circle cx="256" cy="317" r="34" fill="#14532D"/>
+  <circle cx="244" cy="306" r="8" fill="rgba(255,255,255,0.15)"/>
+  <!-- Divider lines between lights -->
+  <line x1="202" y1="196" x2="310" y2="196" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <line x1="202" y1="276" x2="310" y2="276" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="52" font-weight="900" fill="white" letter-spacing="2">COLORS</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">パトライト監視</text>
+</svg>

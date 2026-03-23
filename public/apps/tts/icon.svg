@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F1D1D"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Gantt chart background panel -->
+  <rect x="108" y="120" width="296" height="248" rx="12" fill="rgba(255,255,255,0.12)"/>
+  <!-- Gantt header -->
+  <rect x="108" y="120" width="296" height="36" rx="12" fill="rgba(255,255,255,0.22)"/>
+  <rect x="108" y="144" width="296" height="12" rx="0" fill="rgba(255,255,255,0.22)"/>
+  <!-- Grid vertical lines -->
+  <line x1="183" y1="156" x2="183" y2="368" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <line x1="258" y1="156" x2="258" y2="368" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <line x1="333" y1="156" x2="333" y2="368" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <!-- Row 1: label + bar (long) -->
+  <rect x="115" y="167" width="52" height="22" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="175" y="167" width="140" height="22" rx="4" fill="white" filter="url(#shadow)"/>
+  <!-- Row 2 label + bar (medium, shifted) -->
+  <rect x="115" y="202" width="52" height="22" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="215" y="202" width="110" height="22" rx="4" fill="rgba(255,255,255,0.85)"/>
+  <!-- Row 3 label + bar (short) -->
+  <rect x="115" y="237" width="52" height="22" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="240" y="237" width="80" height="22" rx="4" fill="rgba(255,255,255,0.7)"/>
+  <!-- Row 4 label + bar (long) -->
+  <rect x="115" y="272" width="52" height="22" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="175" y="272" width="160" height="22" rx="4" fill="rgba(255,255,255,0.55)"/>
+  <!-- Row 5 label + bar (medium) -->
+  <rect x="115" y="307" width="52" height="22" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="198" y="307" width="95" height="22" rx="4" fill="rgba(255,255,255,0.4)"/>
+  <!-- Today line -->
+  <line x1="280" y1="156" x2="280" y2="368" stroke="rgba(255,220,220,0.9)" stroke-width="3" stroke-dasharray="6,4"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="65" font-weight="900" fill="white" letter-spacing="4">TTS</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">チームタスク管理</text>
+</svg>

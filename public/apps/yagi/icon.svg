@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E1065"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Phone outline -->
+  <rect x="176" y="112" width="160" height="248" rx="22" fill="white" filter="url(#shadow)"/>
+  <rect x="188" y="126" width="136" height="208" rx="10" fill="#2E1065"/>
+  <!-- Phone home bar -->
+  <rect x="220" y="346" width="72" height="8" rx="4" fill="#DDD6FE"/>
+  <!-- T9/Numpad keys on screen (3x4 grid) -->
+  <!-- Row 1 -->
+  <rect x="196" y="134" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="238" y="134" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="280" y="134" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <!-- Row 2 -->
+  <rect x="196" y="170" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="238" y="170" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="280" y="170" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <!-- Row 3 -->
+  <rect x="196" y="206" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="238" y="206" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="280" y="206" width="36" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <!-- Row 4 (bottom row) -->
+  <rect x="196" y="242" width="36" height="28" rx="6" fill="rgba(255,255,255,0.1)"/>
+  <rect x="238" y="242" width="36" height="28" rx="6" fill="rgba(255,255,255,0.25)"/>
+  <rect x="280" y="242" width="36" height="28" rx="6" fill="rgba(255,255,255,0.1)"/>
+  <!-- AI Sparkle stars -->
+  <!-- Large star -->
+  <path d="M 368 128 L 374 148 L 394 154 L 374 160 L 368 180 L 362 160 L 342 154 L 362 148 Z" fill="white" opacity="0.95"/>
+  <!-- Small star -->
+  <path d="M 388 194 L 391 203 L 400 206 L 391 209 L 388 218 L 385 209 L 376 206 L 385 203 Z" fill="white" opacity="0.75"/>
+  <!-- Tiny star -->
+  <path d="M 352 182 L 354 188 L 360 190 L 354 192 L 352 198 L 350 192 L 344 190 L 350 188 Z" fill="rgba(255,255,255,0.6)"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="60" font-weight="900" fill="white" letter-spacing="3">YAGI</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">AI入力支援</text>
+</svg>

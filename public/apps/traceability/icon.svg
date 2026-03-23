@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#grad)"/>
+  <!-- Node network lines -->
+  <line x1="148" y1="175" x2="256" y2="230" stroke="rgba(255,255,255,0.4)" stroke-width="5"/>
+  <line x1="364" y1="175" x2="256" y2="230" stroke="rgba(255,255,255,0.4)" stroke-width="5"/>
+  <line x1="148" y1="175" x2="148" y2="295" stroke="rgba(255,255,255,0.4)" stroke-width="5"/>
+  <line x1="364" y1="175" x2="364" y2="295" stroke="rgba(255,255,255,0.4)" stroke-width="5"/>
+  <line x1="148" y1="295" x2="256" y2="330" stroke="rgba(255,255,255,0.4)" stroke-width="5"/>
+  <line x1="364" y1="295" x2="256" y2="330" stroke="rgba(255,255,255,0.4)" stroke-width="5"/>
+  <!-- Network nodes -->
+  <circle cx="148" cy="175" r="22" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="364" cy="175" r="22" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="148" cy="295" r="22" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="364" cy="295" r="22" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="256" cy="330" r="22" fill="rgba(255,255,255,0.6)"/>
+  <!-- Magnifying glass (main focus) -->
+  <circle cx="242" cy="228" r="82" fill="none" stroke="white" stroke-width="20" filter="url(#shadow)"/>
+  <circle cx="242" cy="228" r="56" fill="rgba(255,255,255,0.15)"/>
+  <line x1="302" y1="288" x2="370" y2="356" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <!-- Search + symbol inside lens -->
+  <line x1="222" y1="228" x2="262" y2="228" stroke="white" stroke-width="11" stroke-linecap="round"/>
+  <line x1="242" y1="208" x2="242" y2="248" stroke="white" stroke-width="11" stroke-linecap="round"/>
+  <!-- App name -->
+  <text x="256" y="418" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="32" font-weight="900" fill="white" letter-spacing="1">TRACEABILITY</text>
+  <text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.78)" letter-spacing="1">製造追跡</text>
+</svg>
