@@ -21,6 +21,9 @@ export function getApp(slug: string): App | null {
   const { data, content } = matter(fileContent);
   const frontmatter = data as AppFrontmatter;
 
+  // Note: Unlike posts.ts which filters by `published`, apps are always returned
+  // regardless of status. "coming-soon" apps are shown in the UI with a disabled
+  // button — filtering happens at the component level, not here.
   return { slug, ...frontmatter, content };
 }
 
