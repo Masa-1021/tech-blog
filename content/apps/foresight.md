@@ -4,9 +4,9 @@ subtitle: "予兆保全AIシステム"
 description: "品質・稼働データから「壊れる前の異変」を掴み、突発停止ゼロを目指す予兆保全AIシステム"
 category: "活用"
 level: 5
-status: "coming-soon"
-appUrl: null
-network: "external"
+status: "active"
+appUrl: "http://10.168.124.3:8000/App/aws_s3_upload/"
+network: "internal"
 icon: "/apps/foresight/icon.svg"
 banner: "/apps/foresight/banner.svg"
 date: "2026-03-23"

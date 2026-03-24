@@ -14,7 +14,7 @@ const wafStack = new WafStack(app, "WafStack", {
 });
 
 new BlogStack(app, "BlogStack", {
-  env: { account, region: "us-west-2" },
+  env: { account, region: "us-east-1" },
   crossRegionReferences: true,
   webAclArn: wafStack.webAclArn,
 });

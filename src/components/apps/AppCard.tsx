@@ -34,7 +34,7 @@ export function AppCard({ app }: AppCardProps) {
         )}
         {isInternal && !isComingSoon && (
           <div className="absolute right-2 top-2 rounded-full bg-amber-500 px-2 py-0.5 text-xs font-medium text-white">
-            🏭 社内限定
+            🏭 社内サーバー
           </div>
         )}
       </div>
@@ -47,7 +47,7 @@ export function AppCard({ app }: AppCardProps) {
               src={app.icon}
               alt={`${app.title} icon`}
               fill
-              className="object-cover"
+              className="object-contain"
               unoptimized
             />
           </div>

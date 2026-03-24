@@ -83,7 +83,7 @@ export default async function AppPage({ params }: AppPageProps) {
               )}
               {isInternal && (
                 <span className="rounded-full bg-amber-50 px-3 py-0.5 text-xs font-medium text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
-                  🏭 社内ネットワーク限定
+                  🏭 社内サーバー
                 </span>
               )}
             </div>
