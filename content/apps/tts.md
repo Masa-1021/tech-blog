@@ -6,6 +6,7 @@ category: "共有・管理"
 level: null
 status: "active"
 appUrl: "https://d32ji48tzde5hw.cloudfront.net/"
+sourceUrl: "https://github.com/Masa-1021/team-task-scheduler"
 network: "external"
 icon: "/apps/tts/icon.svg"
 banner: "/apps/tts/banner.svg"

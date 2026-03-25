@@ -7,10 +7,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Tech Blog",
-    template: "%s | Tech Blog",
+    default: "DX APPS",
+    template: "%s | DX APPS",
   },
-  description: "フロントエンド、バックエンド、インフラのテクノロジーブログ",
+  description: "三田工場 生産技術グループの製造DXアプリ一覧と技術ブログ",
 };
 
 export default function RootLayout({

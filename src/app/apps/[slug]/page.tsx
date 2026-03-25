@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { getApp, getAllAppSlugs } from "@/lib/apps";
 import { markdownToHtml } from "@/lib/markdown";
 import { CodeBlock } from "@/components/ui/CodeBlock";
@@ -89,7 +90,7 @@ export default async function AppPage({ params }: AppPageProps) {
             </div>
 
             {/* アクションボタン */}
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap gap-2">
               {isComingSoon ? (
                 <span className="inline-block cursor-not-allowed rounded-lg bg-gray-200 px-4 py-2 text-sm font-medium text-gray-400 dark:bg-gray-700 dark:text-gray-500">
                   🚧 準備中
@@ -102,6 +103,24 @@ export default async function AppPage({ params }: AppPageProps) {
                   className="inline-block rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-600"
                 >
                   アプリを開く →
+                </a>
+              )}
+              {app.guideFile && (
+                <Link
+                  href={`/apps/${slug}/guide/`}
+                  className="inline-block rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+                >
+                  使い方
+                </Link>
+              )}
+              {app.sourceUrl && (
+                <a
+                  href={app.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+                >
+                  {"</>"} ソースコード
                 </a>
               )}
             </div>

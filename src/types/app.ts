@@ -10,6 +10,8 @@ export interface AppFrontmatter {
   level: number | null;
   status: AppStatus;
   appUrl: string | null;
+  sourceUrl: string | null;
+  guideFile: string | null;
   network: AppNetwork;
   icon: string;
   banner: string;

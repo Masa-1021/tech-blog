@@ -1,11 +1,12 @@
 ---
 title: "COLORS"
 subtitle: "パトライト色検知システム"
-description: "製造ラインのパトライト（信号灯）の色をリアルタイムで検知し、稼働状態データを自動収集するシステム"
+description: "Raspberry Piで製造ラインのパトライト（信号灯）の色をリアルタイムで検知し、稼働状態データを自動収集するシステム"
 category: "収集"
 level: 2
 status: "active"
 appUrl: "https://github.com/Masa-1021/color-detector-app"
+sourceUrl: "https://github.com/Masa-1021/color-detector-app"
 network: "external"
 icon: "/apps/colors/icon.svg"
 banner: "/apps/colors/banner.svg"

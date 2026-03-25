@@ -1,1 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" fill="none"><rect width="800" height="200" fill="#1e293b"/><text x="400" y="110" font-size="48" fill="#e2e8f0" text-anchor="middle" font-family="monospace" font-weight="bold">TECH BLOG</text></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F2040"/>
+      <stop offset="100%" stop-color="#0D1730"/>
+    </linearGradient>
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- Subtle dot grid background -->
+  <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="rgba(96,165,250,0.12)"/>
+  </pattern>
+  <rect width="1200" height="300" fill="url(#dots)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="300" fill="url(#accentLine)"/>
+
+  <!-- Large 3x3 grid icon (left decorative) -->
+  <g transform="translate(42, 60)" opacity="0.9" filter="url(#glow)">
+    <!-- Row 1 -->
+    <rect x="0"  y="0"  width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="1"/>
+    <rect x="62" y="0"  width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="0.7"/>
+    <rect x="124" y="0" width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="0.45"/>
+    <!-- Row 2 -->
+    <rect x="0"  y="62" width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="0.7"/>
+    <rect x="62" y="62" width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="1"/>
+    <rect x="124" y="62" width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="0.7"/>
+    <!-- Row 3 -->
+    <rect x="0"  y="124" width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="0.45"/>
+    <rect x="62" y="124" width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="0.7"/>
+    <rect x="124" y="124" width="52" height="52" rx="10" fill="url(#gridGrad)" opacity="1"/>
+  </g>
+
+  <!-- Main text: DX APPS -->
+  <text x="290" y="128" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="86" font-weight="900" fill="white" letter-spacing="4" opacity="0.97">DX APPS</text>
+
+  <!-- Divider line -->
+  <line x1="290" y1="148" x2="920" y2="148" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+
+  <!-- Tag badge -->
+  <rect x="290" y="162" width="278" height="30" rx="15" fill="rgba(99,102,241,0.2)" stroke="rgba(99,102,241,0.5)" stroke-width="1"/>
+  <text x="429" y="182" text-anchor="middle" font-family="Meiryo, 'Yu Gothic', 'MS PGothic', Arial, sans-serif" font-size="13" fill="#A5B4FC" font-weight="600" letter-spacing="2">三田工場 製造DXアプリポータル</text>
+
+  <!-- Description text -->
+  <text x="290" y="230" font-family="Meiryo, 'Yu Gothic', 'MS PGothic', Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">hintを活用したアプリを一覧・紹介するサイト</text>
+  <text x="290" y="258" font-family="Meiryo, 'Yu Gothic', 'MS PGothic', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.45)">生産技術グループ開発 / Next.js + AWS CloudFront</text>
+
+  <!-- Right decorative: app card outlines -->
+  <g opacity="0.55">
+    <!-- Card 1 -->
+    <rect x="950" y="40" width="110" height="90" rx="10" fill="rgba(59,130,246,0.12)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+    <rect x="962" y="55" width="86" height="28" rx="5" fill="rgba(96,165,250,0.18)"/>
+    <rect x="962" y="92" width="60" height="6" rx="3" fill="rgba(255,255,255,0.3)"/>
+    <rect x="962" y="105" width="76" height="5" rx="2.5" fill="rgba(255,255,255,0.18)"/>
+    <!-- Card 2 -->
+    <rect x="1072" y="40" width="110" height="90" rx="10" fill="rgba(99,102,241,0.12)" stroke="rgba(129,140,248,0.3)" stroke-width="1"/>
+    <rect x="1084" y="55" width="86" height="28" rx="5" fill="rgba(129,140,248,0.18)"/>
+    <rect x="1084" y="92" width="70" height="6" rx="3" fill="rgba(255,255,255,0.3)"/>
+    <rect x="1084" y="105" width="50" height="5" rx="2.5" fill="rgba(255,255,255,0.18)"/>
+    <!-- Card 3 -->
+    <rect x="950" y="148" width="110" height="90" rx="10" fill="rgba(99,102,241,0.08)" stroke="rgba(129,140,248,0.22)" stroke-width="1"/>
+    <rect x="962" y="163" width="86" height="28" rx="5" fill="rgba(129,140,248,0.12)"/>
+    <rect x="962" y="200" width="55" height="6" rx="3" fill="rgba(255,255,255,0.22)"/>
+    <rect x="962" y="213" width="70" height="5" rx="2.5" fill="rgba(255,255,255,0.14)"/>
+    <!-- Card 4 -->
+    <rect x="1072" y="148" width="110" height="90" rx="10" fill="rgba(59,130,246,0.06)" stroke="rgba(96,165,250,0.18)" stroke-width="1"/>
+    <rect x="1084" y="163" width="86" height="28" rx="5" fill="rgba(96,165,250,0.1)"/>
+    <rect x="1084" y="200" width="64" height="6" rx="3" fill="rgba(255,255,255,0.18)"/>
+    <rect x="1084" y="213" width="46" height="5" rx="2.5" fill="rgba(255,255,255,0.12)"/>
+  </g>
+
+  <!-- Connecting dots -->
+  <circle cx="1005" cy="138" r="3" fill="rgba(96,165,250,0.5)"/>
+  <circle cx="1127" cy="138" r="3" fill="rgba(129,140,248,0.5)"/>
+</svg>

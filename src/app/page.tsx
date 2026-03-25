@@ -1,6 +1,6 @@
 import { getAllApps, APP_CATEGORIES } from "@/lib/apps";
 import { VisionMap } from "@/components/apps/VisionMap";
-import { AppGrid } from "@/components/apps/AppGrid";
+import { AppGridWithFilter } from "@/components/apps/AppGridWithFilter";
 import type { AppCategory } from "@/types/app";
 
 export default function AppsPage() {
@@ -15,17 +15,33 @@ export default function AppsPage() {
   return (
     <div>
       <div className="mb-10">
-        <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          製造DXアプリ一覧
-        </h1>
+        <div className="mb-2 flex items-center justify-between gap-4">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+            hint活用アプリ
+          </h1>
+          <a
+            href="https://forms.office.com/pages/responsepage.aspx?id=Ylunxf9LlkynIGYhzpl45eiJMTTs-PNGmin0_oKxwH1UQlpDR0VHUTg4RktONzVEVzhKV042SUdPRCQlQCN0PWcu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 overflow-hidden rounded-lg border border-gray-200 shadow-sm transition-opacity hover:opacity-80 dark:border-gray-700"
+          >
+            <img
+              src="/apps/hint-helpdesk/banner.png"
+              alt="hint ヘルプデスク"
+              className="h-16 w-auto"
+            />
+          </a>
+        </div>
         <p className="text-gray-500 dark:text-gray-400">
-          三田工場 生産技術グループが開発・運用する製造DXアプリケーション群
+          hintを活用する人が開発・運用する製造DXアプリケーション群
         </p>
       </div>
 
-      <VisionMap apps={apps} />
+      <AppGridWithFilter apps={apps} appsByCategory={appsByCategory} />
 
-      <AppGrid appsByCategory={appsByCategory} />
+      <div className="mt-16">
+        <VisionMap apps={apps} />
+      </div>
     </div>
   );
 }

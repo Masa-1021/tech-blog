@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "fetch-unsplash": "node scripts/fetch-unsplash.mjs"
+    "fetch-unsplash": "node scripts/fetch-unsplash.mjs",
+    "deploy": "bash scripts/deploy.sh"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",

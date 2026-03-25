@@ -6,6 +6,7 @@ category: "見える化"
 level: 3
 status: "active"
 appUrl: "https://mitsubishielectricgroup.sharepoint.com/sites/015733/HIMEMSP01573301/hint/SitePages/web%E3%82%A2%E3%83%97%E3%83%AA.aspx?csf=1&web=1&e=KVNvUe"
+sourceUrl: "http://www.hime.melco.co.jp/230SEIKAN_WEB/230S5/hint/page/tool33.html"
 network: "external"
 icon: "/apps/hint/icon.svg"
 banner: "/apps/hint/banner.svg"

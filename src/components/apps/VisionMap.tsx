@@ -10,28 +10,10 @@ interface VisionLevel {
 
 const VISION_LEVELS: VisionLevel[] = [
   {
-    level: 6,
-    theme: "連携と強調",
-    description: "現場実態に応じた生産計画の動的変更",
-    leftLabel: "AI活用",
-  },
-  {
-    level: 5,
-    theme: "将来を予見する",
-    description: "生産計画の精緻化・適正化 / 生産管理・制御サイクルの向上",
-    leftLabel: "全体最適化",
-  },
-  {
-    level: 4,
-    theme: "問題を把握する",
-    description: "適正な標準作業時間（ST）の整備 / ボトルネックの把握と対策",
-    leftLabel: "現場管理への\nデータ活用",
-  },
-  {
-    level: 3,
-    theme: "流れを制御する",
-    description: "生産指示・実績管理の自動化 / 作業時間・品質ばらつきの要因分析",
-    leftLabel: "運用自動化\n省人化",
+    level: 1,
+    theme: "見える",
+    description: "リソース・生産実績の見える化 / 実績収集の自動化・高度化",
+    leftLabel: "データフォーマット\n統一と標準化",
   },
   {
     level: 2,
@@ -40,10 +22,22 @@ const VISION_LEVELS: VisionLevel[] = [
     leftLabel: "データ基盤の\n整理",
   },
   {
-    level: 1,
-    theme: "見える",
-    description: "リソース・生産実績の見える化 / 実績収集の自動化・高度化",
-    leftLabel: "データフォーマット\n統一と標準化",
+    level: 3,
+    theme: "分析する",
+    description: "蓄積データを活用し、ボトルネック把握・要因分析・意思決定を支援",
+    leftLabel: "データ活用\n意思決定支援",
+  },
+  {
+    level: 4,
+    theme: "AIを活用する",
+    description: "予兆保全・需要予測など、AIが業務判断を支援・自動化",
+    leftLabel: "AI活用\n業務自動化",
+  },
+  {
+    level: 5,
+    theme: "AIが自走する",
+    description: "AIエージェントが自律的に判断・実行し、工場全体を最適化",
+    leftLabel: "自律型工場\n完全自動化",
   },
 ];
 
@@ -85,7 +79,7 @@ export function VisionMap({ apps }: VisionMapProps) {
                 className={`flex items-start gap-4 rounded-xl p-3 transition-colors ${
                   isActive
                     ? "bg-primary-50 dark:bg-primary-900/20"
-                    : level === 6
+                    : level === 5
                     ? "bg-gray-50 opacity-60 dark:bg-gray-900"
                     : "hover:bg-gray-50 dark:hover:bg-gray-700"
                 }`}
@@ -102,7 +96,7 @@ export function VisionMap({ apps }: VisionMapProps) {
                   className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg text-sm font-bold ${
                     isActive
                       ? "bg-primary-500 text-white"
-                      : level === 6
+                      : level === 5
                       ? "bg-gray-200 text-gray-400 dark:bg-gray-700 dark:text-gray-500"
                       : "bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400"
                   }`}
@@ -136,7 +130,7 @@ export function VisionMap({ apps }: VisionMapProps) {
                     </div>
                   )}
 
-                  {level === 6 && levelApps.length === 0 && (
+                  {level === 5 && levelApps.length === 0 && (
                     <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
                       ← 目指す姿（未対応）
                     </p>

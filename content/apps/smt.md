@@ -6,6 +6,7 @@ category: "見える化"
 level: 3
 status: "coming-soon"
 appUrl: null
+sourceUrl: "https://github.com/Masa-1021/smt"
 network: "internal"
 icon: "/apps/smt/icon.svg"
 banner: "/apps/smt/banner.svg"

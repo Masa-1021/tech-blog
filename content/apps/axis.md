@@ -6,6 +6,7 @@ category: "見える化"
 level: 1
 status: "active"
 appUrl: "http://10.168.124.32:5175/"
+sourceUrl: "https://github.com/Masa-1021/ai-drawing-management-system"
 network: "internal"
 icon: "/apps/axis/icon.svg"
 banner: "/apps/axis/banner.svg"

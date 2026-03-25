@@ -6,6 +6,7 @@ category: "見える化"
 level: 1
 status: "active"
 appUrl: "http://10.168.124.32:8001/"
+sourceUrl: "https://github.com/Masa-1021/production-management-dashboard"
 network: "internal"
 icon: "/apps/quick/icon.svg"
 banner: "/apps/quick/banner.svg"

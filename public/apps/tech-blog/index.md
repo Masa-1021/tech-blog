@@ -1,0 +1,323 @@
+---
+title: "TECH BLOG"
+subtitle: "技術情報発信プラットフォーム"
+description: "製造DXプロジェクトの技術知識を体系的に整理・発信する技術ブログ"
+category: "共有・管理"
+level: null
+status: "active"
+appUrl: "https://dwkpbncqk2toe.cloudfront.net/posts/"
+sourceUrl: "https://github.com/Masa-1021/tech-blog"
+network: "external"
+icon: "/apps/tech-blog/icon.svg"
+banner: "/apps/tech-blog/banner.svg"
+date: "2026-03-23"
+---
+
+# tech-blog - 個人技術ブログ 開発報告
+
+> **ビジョン：技術知識を体系的に整理・発信し、エンジニアとして継続的に成長するためのプラットフォームを自分で作る**
+
+---
+
+## 1. 現在の課題（Problem）
+
+個人の技術学習・発信において日常的に発生している課題を整理しました。
+
+### 1-1. 外部プラットフォームへの依存
+
+Qiita・Zenn などの既存ブログサービスは手軽に使えるが、**デザイン・機能・データの所有権がプラットフォーム側にある**。
+広告表示・ルール変更・サービス終了のリスクを常に抱えており、コンテンツ資産を自分でコントロールできない。
+
+### 1-2. シリーズ記事・カテゴリ管理の煩雑さ
+
+技術の深堀りをすると記事が連載形式（シリーズ）になるが、既存サービスではシリーズ間のナビゲーションやカテゴリ・タグでの整理に限界がある。
+その結果、読者が関連記事を見つけにくく、知識のつながりが伝わらない。
+
+### 1-3. 執筆〜公開フローの手作業
+
+```
+執筆（ローカル）
+  ↓
+コピー＆ペーストでブラウザエディタに貼り付け
+  ↓
+画像を個別アップロード
+  ↓
+カテゴリ・タグを手動設定
+  ↓
+公開ボタンをクリック
+  ↓ → 変更のたびにこれを繰り返す
+```
+
+<!-- 課題は具体的に。「〜ができていない」だけでなく「その結果〜が起きている」まで書く -->
+
+---
+
+## 2. tech-blogでこう変わる（Solution）
+
+| # | 現状（BEFORE） | 導入後（AFTER） |
+|---|---|---|
+| 1 | 外部サービスのルールに縛られる | **完全自前ホスティング**でデザイン・機能・データを100%コントロール |
+| 2 | シリーズ記事が散らばって管理しにくい | **シリーズナビゲーション + カテゴリ/タグ**で記事を体系的に整理 |
+| 3 | 記事公開が手作業でミスが起きやすい | **Git push 1回**でビルド〜デプロイまで自動完結 |
+| 4 | 関連コンテンツへの誘導がない | **関連記事レコメンド**でカテゴリ・トピック一致率をスコアリング（今後強化） |
+
+### コンテンツ管理の構成イメージ
+
+```
+content/posts/
+  ├── 2026-03-01-amplify-gen2-cognito-auth-part1.md   ← シリーズ: Amplify Gen2認証 (3回)
+  ├── 2026-03-01-amplify-gen2-cognito-auth-part2.md
+  ├── 2026-03-01-amplify-gen2-cognito-auth-part3.md
+  ├── 2026-03-01-aws-serverless-chat-part1.md         ← シリーズ: AWSサーバーレスチャット (5回)
+  │   ...（part2〜5）
+  ├── 2026-03-16-image-analysis-01-*.md               ← シリーズ: 製造業向けAI画像分析 (10回)
+  │   ...（02〜10）
+  └── 01_mqtt_introduction.md                         ← シリーズ: MQTT (5回)
+      ...
+```
+
+フロントマター（YAML）でタイトル・カテゴリ・タグ・シリーズ順を一元管理。
+コンテンツとインフラが分離しているため、記事追加はファイルを置くだけ。
+
+---
+
+## 3. システム全体像
+
+```
+┌──────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────┐
+│  Markdown │ ─→ │ GitHub Push  │ ─→ │ GitHub       │ ─→ │  S3 (静的    │ ─→ │CloudFront│
+│  記事追加 │    │  (main branch)│    │ Actions      │    │  ファイル)   │    │ + WAF    │
+│          │    │              │    │ npm run build│    │              │    │          │
+└──────────┘    └──────────────┘    └──────────────┘    └──────────────┘    └──────────┘
+                                           ↓                                      ↓
+                                    Next.js 静的エクスポート              IPアドレス制限 + HTTPS
+                                    (out/ ディレクトリ)                   CloudFront Functions
+                                                                          (URLリライト)
+```
+
+### 技術スタック
+
+| レイヤー | 技術 |
+|---|---|
+| フロントエンド | Next.js 15 (静的エクスポート), React 19, TypeScript 5.7 |
+| スタイリング | Tailwind CSS 4, next-themes（ダーク/ライト切替） |
+| コンテンツ処理 | gray-matter (Markdown パース), unified / remark / rehype パイプライン |
+| シンタックスハイライト | Shiki (github-dark テーマ, 16言語対応) |
+| 数式レンダリング | KaTeX (remark-math + rehype-katex) |
+| 図解レンダリング | Mermaid (クライアントサイド) |
+| 全文検索 | Fuse.js (クライアントサイドファジー検索) |
+| RSS | feed ライブラリ (feed.xml 自動生成) |
+| インフラ (IaC) | AWS CDK (TypeScript) |
+| ホスティング | AWS S3 + CloudFront (us-west-2) |
+| セキュリティ | AWS WAF v2 (IPアドレスホワイトリスト, us-east-1) |
+| CI/CD | GitHub Actions (main push で自動ビルド＆デプロイ) |
+| テスト | Vitest + @testing-library/react |
+
+---
+
+## 4. 主要機能の詳細
+
+### 4-1. Markdown記事管理 + フロントマター
+
+記事はすべて `content/posts/*.md` として管理。ファイル名がそのままURLスラッグになる。
+
+```
+入力: content/posts/2026-03-16-image-analysis-01-lambda-streaming.md
+  ↓
+処理: gray-matter でフロントマター解析 + reading-time で読了時間計算
+  ↓
+出力: /posts/2026-03-16-image-analysis-01-lambda-streaming
+      タイトル / カテゴリ / タグ / シリーズ / 読了時間 が自動付与
+```
+
+フロントマター例:
+```yaml
+---
+title: "Lambda Streaming で実現するリアルタイム応答"
+emoji: "⚡"
+type: "tech"
+topics: ["AWS", "Lambda", "Python", "Streaming"]
+published: true
+category: "HowTo"
+date: "2026-03-16"
+series: "製造業向けAI画像分析システムを作る"
+seriesOrder: 1
+---
+```
+
+### 4-2. シンタックスハイライト + ノートブロック
+
+Shiki による高品質なコードハイライト（TypeScript, Python, Go, Rust, Bash など16言語対応）。
+Qiita互換の :::note ブロック（info / warn / alert）もサポート。
+
+```
+入力: ```python コードブロック + :::note warn ブロック
+  ↓
+処理: unified パイプライン → rehype-slug (見出しID) → KaTeX (数式) → Shiki (コード)
+  ↓
+出力: 言語ラベル付きシンタックスハイライト + アイコン付き警告ボックス
+```
+
+### 4-3. クライアントサイド全文検索
+
+Fuse.js によるファジー全文検索。ビルド時に検索インデックスを生成し、クライアントサイドで完結。
+外部検索APIへの依存なし、ゼロレイテンシ検索を実現。
+
+```
+入力: キーワード入力 (SearchModal)
+  ↓
+処理: Fuse.js がタイトル / カテゴリ / トピック / 本文抜粋を横断検索
+  ↓
+出力: 一致記事のリアルタイム表示
+```
+
+### 4-4. 関連記事レコメンド
+
+カテゴリ一致 (+2点) + トピック重複数 (+n点) でスコアリングし、上位4件を表示。
+
+---
+
+## 5. インフラ・CI/CD 構成
+
+```
+[開発者 (ローカル)]              [GitHub]                     [AWS]
+┌────────────────┐              ┌──────────────┐             ┌──────────────────────────┐
+│ git push main  │  ──Push──→  │ GitHub        │  ──Deploy──→│ S3 (静的サイト)          │
+│ (記事追加/修正)│              │ Actions       │             │ CloudFront (CDN + HTTPS) │
+└────────────────┘              │               │             │ WAF (IPホワイトリスト)    │
+                                │ 1. npm ci     │             │ CloudFront Functions     │
+                                │ 2. npm build  │             │ (URLリライト .html付与)  │
+                                │ 3. S3 sync    │             └──────────────────────────┘
+                                │ 4. CF無効化   │
+                                └──────────────┘
+                                  ↑ 約1〜2分で完了
+```
+
+IaC は AWS CDK (TypeScript) で管理。S3バケットはパブリックアクセス完全ブロック + OAC経由のみ。
+
+---
+
+## 6. 実装済みの価値
+
+| 価値 | 詳細 |
+|---|---|
+| **完全なコンテンツ所有権** | Markdownファイル = コンテンツ資産。GitHubでバージョン管理され、プラットフォーム依存ゼロ |
+| **ゼロタッチデプロイ** | `git push` 1回で自動ビルド＆CDN配信。約1〜2分でライブ反映 |
+| **高品質な読書体験** | Shikiハイライト / KaTeX数式 / Mermaid図解 / 目次 / ダーク・ライトモード |
+| **シリーズ記事対応** | 連載のナビゲーション・順序管理をフロントマターで統一管理 |
+| **セキュリティ** | WAFによるIPホワイトリスト + S3完全非公開 + HTTPS強制 |
+| **コスト最適化** | 静的サイト配信のため、サーバーレスコストは月数十円以下 |
+
+---
+
+## 7. 実績データ
+
+### 現時点でのコンテンツ量
+
+| 項目 | 数 |
+|---|---|
+| 総記事数 | 23記事 |
+| 総本文量 | 約10,400行 |
+| シリーズ数 | 4シリーズ |
+| 対応カテゴリ | 4種類 (HowTo / Architecture / Tips / Troubleshoot) |
+
+### シリーズ内訳
+
+| シリーズ名 | 記事数 |
+|---|---|
+| 製造業向けAI画像分析システムを作る | 10記事 |
+| AWSサーバーレスチャット | 5記事 |
+| MQTTシリーズ | 5記事 |
+| Amplify Gen 2でCognito認証を実装する | 3記事 |
+
+### インフラリソース
+
+| リソース | 詳細 |
+|---|---|
+| S3バケット | blogstack-sitebucket... (us-west-2) |
+| CloudFront | E1KKE3I5GVIO45 |
+| WAF | WebAcl-1XDrjFMSTxpJ (us-east-1, グローバル) |
+| CI/CD | GitHub Actions (Masa-1021/tech-blog) |
+
+---
+
+## 8. tech-blogで描く未来（Benefit）
+
+### 目指す世界
+
+```
+  ┌─────────────────────────┐
+  │ 技術を学んだ・実装した  │
+  └────────────┬────────────┘
+               ↓
+  ┌─────────────────────────┐
+  │ Markdownで記事を書く    │
+  │ → git push で公開完了   │
+  └────────────┬────────────┘
+               ↓
+  ┌──────┐  ┌──────┐  ┌───────────┐
+  │シリーズ│  │検索  │  │関連記事   │  ← 読者が体系的に学習できる
+  │ナビ  │  │      │  │レコメンド │
+  └──────┘  └──────┘  └───────────┘
+```
+
+### 具体的に実現したいこと
+
+**カスタムドメイン**
+- 独自ドメインの取得と Route 53 / CloudFront への設定
+
+**OGP画像の自動生成**
+- 記事タイトルからサムネイル画像をビルド時に自動生成（SNSシェア時の訴求力向上）
+
+**アクセス解析の導入**
+- CloudFront ログや軽量アナリティクス（Umami など）でどの記事が読まれているか把握
+
+**コメント機能**
+- giscus (GitHub Discussions ベース) でサーバーレスなコメント欄を追加
+
+---
+
+## 9. 開発ロードマップ
+
+```
+Phase 1: 基盤構築 [DONE]               Phase 2: 体験向上 [NEXT]              Phase 3: 成長 [FUTURE]
+───────────────────────────────        ───────────────────────────────        ───────────────────────────────
+✓ Next.js 15 静的エクスポート          □ カスタムドメイン取得                 □ アクセス解析導入
+✓ AWS CDK (S3 + CloudFront + WAF)      □ OGP画像自動生成                      □ コメント機能 (giscus)
+✓ GitHub Actions CI/CD                 □ 検索精度向上 (スコアリング改善)       □ 多言語対応 (英語記事)
+✓ Markdown管理 + フロントマター         □ RSSリーダー対応強化                  □ 記事統計ダッシュボード
+✓ シンタックスハイライト (Shiki)        □ パフォーマンス計測・改善             □ 外部投稿との連携 (Zenn同期)
+✓ KaTeX数式 + Mermaid図解
+✓ Fuse.js 全文検索
+✓ シリーズ記事ナビゲーション
+✓ ダーク/ライトテーマ
+✓ 関連記事レコメンド
+✓ RSS フィード生成
+✓ 23記事公開 (4シリーズ)
+```
+
+---
+
+## アセットダウンロード
+
+DX APPSのバナー・アイコンはご自由にお使いください。
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0;">
+  <a href="/apps/tech-blog/banner.svg" download="dx-apps-banner.svg" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#3b82f6;color:white;border-radius:8px;font-weight:600;text-decoration:none;">
+    ↓ バナー (SVG 1200×300)
+  </a>
+  <a href="/apps/tech-blog/icon.svg" download="dx-apps-icon.svg" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#6366f1;color:white;border-radius:8px;font-weight:600;text-decoration:none;">
+    ↓ アイコン (SVG 512×512)
+  </a>
+</div>
+
+---
+
+## まとめ
+
+1. **外部プラットフォーム依存**を**フルスクラッチ構築**で解消し、コンテンツ資産と配信インフラを完全自己所有
+2. **Markdown + Git + GitHub Actions** でコンテンツ管理とデプロイを統一し、執筆に集中できるフローを実現
+3. その先に**「自分の知識ベースを継続的に育て、体系的に発信するプラットフォーム」**を実現する
+
+> **tech-blog**
+> Markdownを置くだけ。1〜2分でライブ公開。エンジニアのための、エンジニアが作ったブログ。
